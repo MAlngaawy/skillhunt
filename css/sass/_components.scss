@@ -1,0 +1,17 @@
+// Here Will Be (Buttons, Heading)
+
+/////// Buttons 
+
+.main-btn {
+  background-color: $mainColor;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.second-btn {
+  @extend .main-btn;
+  background-color: $secondColor;
+}
