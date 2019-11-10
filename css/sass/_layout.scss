@@ -118,9 +118,9 @@ nav {
           background-color: #FFF;
           padding: 30px;
           border-radius: 10px;
+          transition: all 1s linear;
           display: none;
           opacity: 0;
-          transition: all 1s linear;
           &.active {
             display: block;
             opacity: 1;
@@ -149,9 +149,10 @@ nav {
                 &.search-btn {
                   background-color: $mainColor;
                   color: #FFF;
-                  font-size: 20px;
+                  font-size: 15px;
                   margin: 0 5px;
                   border: none;
+                  padding: 0;
                 }
               }
               select {
@@ -177,6 +178,9 @@ nav {
 }
 
 @media (max-width: "776px") {
+  #header {
+    padding-bottom: 30px;
+  }
   .find-job, .find-candidate {
     form div {
      margin-bottom: 20px !important;
@@ -199,6 +203,6 @@ nav {
     margin-top: 5px;
   }
   .find-job, .find-candidate {
-    margin-top: -20px;
+    margin-top: -10px;
   }
 }

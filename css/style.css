@@ -141,9 +141,9 @@ nav a {
   background-color: #FFF;
   padding: 30px;
   border-radius: 10px;
+  transition: all 1s linear;
   display: none;
   opacity: 0;
-  transition: all 1s linear;
 }
 #header .content .tabs .row .find-job.active, #header .content .tabs .row .find-candidate.active {
   display: block;
@@ -174,9 +174,10 @@ nav a {
 #header .content .tabs .row .find-job form div input.search-btn, #header .content .tabs .row .find-job form div select.search-btn, #header .content .tabs .row .find-candidate form div input.search-btn, #header .content .tabs .row .find-candidate form div select.search-btn {
   background-color: #206dfb;
   color: #FFF;
-  font-size: 20px;
+  font-size: 15px;
   margin: 0 5px;
   border: none;
+  padding: 0;
 }
 #header .content .tabs .row .find-job form div select, #header .content .tabs .row .find-candidate form div select {
   padding-left: 30px;
@@ -190,6 +191,10 @@ nav a {
   }
 }
 @media (max-width: 776px) {
+  #header {
+    padding-bottom: 30px;
+  }
+
   .find-job form div, .find-candidate form div {
     margin-bottom: 20px !important;
   }
@@ -216,7 +221,7 @@ nav a {
   }
 
   .find-job, .find-candidate {
-    margin-top: -20px;
+    margin-top: -10px;
   }
 }
 
