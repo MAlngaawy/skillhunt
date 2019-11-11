@@ -1,0 +1,150 @@
+/////// Start Section FTCO 
+
+.ftco {
+  margin-bottom: 50px;
+  margin-top: -50px;
+  .have-shadow {
+    box-shadow: 3px 3px 20px rgb(202, 202, 202);
+  }
+  .col-md-2 {
+    margin: 0;
+    padding: 0;
+  }
+  .box {
+    padding: 30px;
+    text-align: center;
+    background: #FFF;
+    margin: 0;
+    &.active {
+      background: $secondColor;
+      color: #FFF;
+      >span {
+        color: #FFF
+      }
+    }
+    &:hover {
+      background: $mainColor;
+      color: #FFF;
+      >span {
+       color: #FFF; 
+      }
+    }
+    h2 {
+      font-size: 20px;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    > span {
+      display: block;
+      margin: 15px 5px;
+      font-size: 40px;
+      color: $mainColor;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: "776px") {
+  .ftco .box {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+
+
+////// Start Section Categories ////////////////
+
+.categories {
+  text-align: center;
+  margin: 100px 0;
+  .head-text {
+    p {
+      color: $mainColor;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 40px;
+      margin-bottom: 50px;
+    }
+  }
+  .row {
+    .box {
+      background-color: #FFF;
+      border-bottom: 1px solid #dddddd;
+      padding: 20px;
+      cursor: pointer;
+      transition: all .5s;
+      border-radius: 2px;
+      .chevron {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        color: $secondColor;
+        opacity: 0;
+        transition: all .5s linear;
+      }
+      h3 {
+        font-size: 23px;
+      }
+      .position-nums {
+        span.open {
+          color: rgb(196, 196, 196);
+          margin-left: 5px;
+          transition: all .5s;
+        }
+        .number {
+          background: #fff5e4;
+          padding: 0px 4px;
+          border-radius: 3px;
+          color: $secondColor;
+        }
+      }
+      &:hover {
+        background-color: #ffefdb;
+        .chevron {
+          opacity: 1;
+          right: 30px;
+        }
+        h3 {
+          color: $mainColor;
+        }
+        .position-nums {
+          .open {
+            color: #000;
+          }
+          .number {
+            background-color: #fffcf6;
+          }
+        }
+      }
+    }
+  }
+}
+
+//// Start section Services
+
+.services {
+  background: linear-gradient(to right, #207dff 0%, #a16ae8 100%);
+  padding: 80px 0;
+  color: #FFF;
+  .box {
+    span {
+      font-size: 60px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    p {
+      margin-top: 15px;
+      color: #ffffffb0;
+      font-size: 17px;
+    }
+  }
+}
