@@ -64,6 +64,7 @@ nav a {
   position: relative;
   width: 100%;
   min-height: 800px;
+  padding-bottom: 50px;
 }
 #header .overlay {
   width: 100%;
@@ -223,6 +224,137 @@ nav a {
   .find-job, .find-candidate {
     margin-top: -10px;
   }
+}
+.ftco {
+  margin-bottom: 50px;
+  margin-top: -50px;
+}
+.ftco .have-shadow {
+  box-shadow: 3px 3px 20px #cacaca;
+}
+.ftco .col-md-2 {
+  margin: 0;
+  padding: 0;
+}
+.ftco .box {
+  padding: 30px;
+  text-align: center;
+  background: #FFF;
+  margin: 0;
+}
+.ftco .box.active {
+  background: #fdab44;
+  color: #FFF;
+}
+.ftco .box.active > span {
+  color: #FFF;
+}
+.ftco .box:hover {
+  background: #206dfb;
+  color: #FFF;
+}
+.ftco .box:hover > span {
+  color: #FFF;
+}
+.ftco .box h2 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.ftco .box > span {
+  display: block;
+  margin: 15px 5px;
+  font-size: 40px;
+  color: #206dfb;
+}
+.ftco .box p {
+  font-size: 15px;
+}
+
+@media (max-width: 776px) {
+  .ftco .box {
+    width: 90%;
+    margin: auto;
+  }
+}
+.categories {
+  text-align: center;
+  margin: 100px 0;
+}
+.categories .head-text p {
+  color: #206dfb;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.categories .head-text h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.categories .row .box {
+  background-color: #FFF;
+  border-bottom: 1px solid #dddddd;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 2px;
+}
+.categories .row .box .chevron {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  color: #fdab44;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.categories .row .box h3 {
+  font-size: 23px;
+}
+.categories .row .box .position-nums span.open {
+  color: #c4c4c4;
+  margin-left: 5px;
+  transition: all 0.5s;
+}
+.categories .row .box .position-nums .number {
+  background: #fff5e4;
+  padding: 0px 4px;
+  border-radius: 3px;
+  color: #fdab44;
+}
+.categories .row .box:hover {
+  background-color: #ffefdb;
+}
+.categories .row .box:hover .chevron {
+  opacity: 1;
+  right: 30px;
+}
+.categories .row .box:hover h3 {
+  color: #206dfb;
+}
+.categories .row .box:hover .position-nums .open {
+  color: #000;
+}
+.categories .row .box:hover .position-nums .number {
+  background-color: #fffcf6;
+}
+
+.services {
+  background: linear-gradient(to right, #207dff 0%, #a16ae8 100%);
+  padding: 80px 0;
+  color: #FFF;
+}
+.services .box span {
+  font-size: 60px;
+}
+.services .box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.services .box p {
+  margin-top: 15px;
+  color: #ffffffb0;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=style.css.map */
