@@ -43,6 +43,7 @@ nav {
   position: relative;
   width: 100%;
   min-height: 800px;
+  padding-bottom: 50px;
   .overlay {
     width: 100%;
     height: 100%;
@@ -204,5 +205,77 @@ nav {
   }
   .find-job, .find-candidate {
     margin-top: -10px;
+  }
+}
+
+
+/////////////////// Start Fooooooter ////////////
+
+#footer {
+  padding: 100px 0;
+  .box {
+    padding: 10px;
+    .box-title {
+      font-size: 18px;
+      margin: 20px 0;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    p {
+      font-size: 17px;
+      color:rgba(0, 0, 0, 0.5);
+    }
+    ul.social-media {
+      li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          margin: 0 5px;
+          background: rgba(0, 0, 0, 0.05);
+          line-height: 40px;
+          border-radius: 50%;
+          color: $mainColor;
+          i {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+    ul {
+      li {
+        margin: 10px 0;
+        a {
+          color:rgba(0, 0, 0, 0.5);
+          &:hover {
+            color:rgba(0, 0, 0, .8);
+          }
+        }
+      }
+      &.question {
+        li {
+          color:rgba(0, 0, 0, 0.5);
+          display: table;
+          margin: 20px 0;
+          i {
+            display: table-cell;
+            width: 30px;
+          }
+          span {
+            display: table-cell;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    margin: 30px auto;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 17px;
+    i {
+      color: #f10000;
+    }
   }
 }

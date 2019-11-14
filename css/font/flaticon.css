@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 07/11/2019 09:08
+  	Creation date: 10/11/2019 21:46
   	*/
 
 @font-face {
@@ -26,9 +26,18 @@
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
 font-style: normal;
-margin-left: 20px;
 }
 
 .flaticon-portfolio:before { content: "\f100"; }
 .flaticon-worldwide:before { content: "\f101"; }
 .flaticon-visitor:before { content: "\f102"; }
+.flaticon-software:before { content: "\f103"; }
+.flaticon-mortarboard:before { content: "\f104"; }
+.flaticon-creativity:before { content: "\f105"; }
+.flaticon-accounting:before { content: "\f106"; }
+.flaticon-dish:before { content: "\f107"; }
+.flaticon-doctor-stethoscope:before { content: "\f108"; }
+.flaticon-job:before { content: "\f109"; }
+.flaticon-team:before { content: "\f10a"; }
+.flaticon-promotion:before { content: "\f10b"; }
+.flaticon-parents:before { content: "\f10c"; }
