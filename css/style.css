@@ -1,4 +1,5 @@
 .main-btn, .second-btn {
+  display: inline-block;
   background-color: #206dfb;
   color: #FFF;
   border: none;
@@ -23,8 +24,12 @@
   margin: auto;
 }
 
+a {
+  color: unset;
+}
 a:hover {
   text-decoration: none;
+  color: unset;
 }
 
 li {
@@ -67,7 +72,7 @@ nav a {
   background: url(../../images/bg_1.jpg);
   position: relative;
   width: 100%;
-  min-height: 800px;
+  min-height: 400px;
   padding-bottom: 50px;
 }
 #header .overlay {
@@ -127,10 +132,34 @@ nav a {
   line-height: 1;
   color: #FFF;
 }
-#header .content .tabs {
+#header .pages {
+  height: 200px;
+  display: grid;
+  align-items: end;
+}
+#header .pages .breadcrumb {
+  background: none;
+  margin: 5px auto;
+}
+#header .pages .breadcrumb li {
+  color: rgba(255, 255, 255, 0.9);
+}
+#header .pages .breadcrumb li a {
+  color: rgba(255, 255, 255, 0.9);
+}
+#header .pages .breadcrumb li::before {
+  color: #FFF;
+}
+#header .page-title {
+  text-align: center;
+  color: #FFF;
+  font-size: 50px;
+}
+
+.tabs {
   margin: 50px 0;
 }
-#header .content .tabs .row a {
+.tabs .row a {
   background-color: #fdab44;
   color: #FFF;
   padding: 15px 30px;
@@ -138,11 +167,11 @@ nav a {
   margin-right: 10px;
   font-size: 20px;
 }
-#header .content .tabs .row a.active, #header .content .tabs .row a:hover {
+.tabs .row a.active, .tabs .row a:hover {
   background-color: #FFF;
   color: #333333;
 }
-#header .content .tabs .row .find-job, #header .content .tabs .row .find-candidate {
+.tabs .row .find-job, .tabs .row .find-candidate {
   background-color: #FFF;
   padding: 30px;
   border-radius: 10px;
@@ -150,16 +179,16 @@ nav a {
   display: none;
   opacity: 0;
 }
-#header .content .tabs .row .find-job.active, #header .content .tabs .row .find-candidate.active {
+.tabs .row .find-job.active, .tabs .row .find-candidate.active {
   display: block;
   opacity: 1;
 }
-#header .content .tabs .row .find-job form div, #header .content .tabs .row .find-candidate form div {
+.tabs .row .find-job form div, .tabs .row .find-candidate form div {
   margin: 0 5px;
   position: relative;
   padding: 0;
 }
-#header .content .tabs .row .find-job form div i, #header .content .tabs .row .find-candidate form div i {
+.tabs .row .find-job form div i, .tabs .row .find-candidate form div i {
   position: absolute;
   z-index: 2;
   color: #3333;
@@ -167,7 +196,7 @@ nav a {
   left: 10px;
   font-size: 20px;
 }
-#header .content .tabs .row .find-job form div input, #header .content .tabs .row .find-job form div select, #header .content .tabs .row .find-candidate form div input, #header .content .tabs .row .find-candidate form div select {
+.tabs .row .find-job form div input, .tabs .row .find-job form div select, .tabs .row .find-candidate form div input, .tabs .row .find-candidate form div select {
   padding-left: 40px;
   height: 60px;
   color: #7575a1;
@@ -176,7 +205,7 @@ nav a {
   width: 100%;
   font-size: 14px;
 }
-#header .content .tabs .row .find-job form div input.search-btn, #header .content .tabs .row .find-job form div select.search-btn, #header .content .tabs .row .find-candidate form div input.search-btn, #header .content .tabs .row .find-candidate form div select.search-btn {
+.tabs .row .find-job form div input.search-btn, .tabs .row .find-job form div select.search-btn, .tabs .row .find-candidate form div input.search-btn, .tabs .row .find-candidate form div select.search-btn {
   background-color: #206dfb;
   color: #FFF;
   font-size: 15px;
@@ -184,7 +213,7 @@ nav a {
   border: none;
   padding: 0;
 }
-#header .content .tabs .row .find-job form div select, #header .content .tabs .row .find-candidate form div select {
+.tabs .row .find-job form div select, .tabs .row .find-candidate form div select {
   padding-left: 30px;
 }
 
@@ -434,7 +463,7 @@ section .title-text h2 {
 }
 .recently .box {
   padding: 15px;
-  margin: 10px 0;
+  margin-bottom: 25px;
   padding-left: 30px;
   background: #FFF;
   border-radius: 5px;
@@ -605,12 +634,12 @@ section .title-text h2 {
 }
 
 .blog {
-  padding: 70px 150px;
+  padding: 70px 100px;
 }
 .blog .box {
-  padding: 10px;
+  margin-bottom: 50px;
 }
-.blog .box a {
+.blog .box a.img {
   display: block;
   background-size: cover;
   background-repeat: no-repeat;
@@ -634,7 +663,12 @@ section .title-text h2 {
 }
 .blog .box .subject {
   text-align: left;
-  font-size: 15px;
+  font-size: 18px;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+.blog .box .subject:hover {
+  color: #206dfb;
 }
 
 @media (max-width: 776px) {
@@ -681,6 +715,523 @@ section .title-text h2 {
   .sebscribe form input:last-of-type {
     margin: 5px auto;
   }
+}
+/* Start Browse Jobs Page Style  */
+.recently .filter .category {
+  background: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.recently .filter .category h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.recently .filter .category form .search-box {
+  position: relative;
+}
+.recently .filter .category form .search-box input[type=search] {
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+}
+.recently .filter .category form .search-box i {
+  position: absolute;
+  top: 30%;
+  right: 25px;
+  color: #a7a7a7;
+}
+.recently .filter .category form .checkbox {
+  color: #a5a5a5;
+  font-size: 15px;
+}
+.recently .filter .category form .checkbox input[type=checkbox] {
+  margin: 10px 2px;
+}
+
+.more-jobs {
+  text-align: center;
+  margin: 30px 0;
+}
+.more-jobs li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.more-jobs li a {
+  border: 1px solid #206dfb;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #206dfb;
+}
+.more-jobs li a.active {
+  background: #206dfb;
+  color: #FFF;
+}
+
+.recently .team {
+  background: #FFF;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.recently .team .img {
+  display: inline-block;
+  vertical-align: top;
+}
+.recently .team .img .user {
+  width: 180px;
+  border-radius: 50%;
+  margin: 20px 0 0 20px;
+  vertical-align: top;
+}
+.recently .team .info {
+  width: calc(100% - 210px);
+  display: inline-block;
+  padding: 20px;
+}
+.recently .team .info .country {
+  color: #a3a3a3;
+}
+.recently .team .info .name {
+  font-size: 25px;
+  margin: 5px 0;
+}
+.recently .team .info .status {
+  color: #fdab44;
+  background: #fff1e0;
+  font-size: 14px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: inline-block;
+}
+.recently .team .info .description {
+  color: #848484;
+  margin: 10px 0;
+  font-size: 15px;
+}
+.recently .team .info .last-active {
+  color: #a3a3a3;
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.recently .team .info button {
+  padding: 5px 15px;
+}
+
+@media (max-width: 776px) {
+  .recently .team .img {
+    display: block;
+    text-align: center;
+  }
+  .recently .team .info {
+    width: 100%;
+    text-align: center;
+  }
+}
+.single-blog {
+  margin: 100px 0;
+}
+.single-blog .blog-content h2 {
+  margin: 20px 0;
+  color: #333;
+}
+.single-blog .blog-content p {
+  margin: 20px 0;
+  color: #949494;
+  font-size: 17px;
+}
+.single-blog .blog-content img {
+  width: 100%;
+  display: inline-block;
+  margin: 30px 0;
+}
+.single-blog .tags {
+  margin: 50px 0;
+}
+.single-blog .tags ul li {
+  display: inline-block;
+}
+.single-blog .tags ul li a {
+  margin: 0 5px;
+  border: 1px solid #a3a3a3;
+  padding: 3px 10px;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  font-size: 14px;
+}
+.single-blog .tags ul li a:hover {
+  background: #206dfb;
+  color: #FFF;
+  border: 1px solid #206dfb;
+}
+.single-blog .auteur {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+.single-blog .auteur .img {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+.single-blog .auteur .img img {
+  max-width: 80%;
+}
+.single-blog .auteur .info {
+  display: inline-block;
+  width: 69%;
+  padding: 10px;
+}
+.single-blog .auteur .info .name {
+  font-size: 23px;
+}
+.single-blog .auteur .info p {
+  color: #a3a3a3;
+}
+.single-blog .comments {
+  margin: 20px 0;
+}
+.single-blog .comments > h3 {
+  margin: 20px 0;
+}
+.single-blog .comments .user-comment {
+  margin: 20px 0;
+  padding: 10px;
+}
+.single-blog .comments .user-comment .user-img {
+  width: 10%;
+  vertical-align: top;
+  display: inline-block;
+}
+.single-blog .comments .user-comment .user-img img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.single-blog .comments .user-comment .comment-info {
+  width: 89%;
+  display: inline-block;
+  padding-left: 20px;
+}
+.single-blog .comments .user-comment .comment-info .name {
+  font-size: 23px;
+}
+.single-blog .comments .user-comment .comment-info .date {
+  color: #a3a3a3;
+  display: inline-block;
+  margin: 5px 0;
+}
+.single-blog .comments .user-comment .comment-info .comment {
+  color: #808080;
+  margin-bottom: 20px;
+}
+.single-blog .comments .user-comment .comment-info .reply {
+  background: #eaeaea;
+  font-size: 14px;
+  padding: 3px 10px;
+  color: #636363;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+.single-blog .comments .user-comment .comment-info .reply:hover {
+  background: #000;
+  color: #FFF;
+}
+.single-blog .add-comment {
+  margin: 30px 0;
+}
+.single-blog .add-comment h3 {
+  margin: 50px 0;
+}
+.single-blog .add-comment form {
+  background: #f8f9fa;
+  padding: 20px;
+}
+.single-blog .add-comment form .input-field {
+  margin: 20px auto;
+  width: 90%;
+}
+.single-blog .add-comment form .input-field span {
+  display: block;
+  margin: 5px 0;
+  color: #868686;
+  font-size: 15px;
+}
+.single-blog .add-comment form .input-field input, .single-blog .add-comment form .input-field textarea {
+  width: 100%;
+  padding: 6px 0;
+  border: 1px solid #c7c7c7;
+  border-radius: 3px;
+}
+.single-blog .add-comment form .input-field input.main-btn, .single-blog .add-comment form .input-field input.second-btn {
+  width: unset;
+  padding: 7px 10px;
+  border: 0;
+}
+.single-blog .sidebar {
+  padding-left: 20px;
+}
+.single-blog .sidebar .search-box {
+  position: relative;
+}
+.single-blog .sidebar .search-box input[type=search] {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 5px;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  width: 90%;
+  font-size: 14px;
+}
+.single-blog .sidebar .search-box i {
+  position: absolute;
+  top: 30%;
+  right: 55px;
+  color: #a7a7a7;
+}
+.single-blog .sidebar .jobs {
+  margin-top: 30px;
+}
+.single-blog .sidebar .jobs .title {
+  margin: 20px 0;
+}
+.single-blog .sidebar .jobs ul li {
+  font-size: 15px;
+  color: #333;
+}
+.single-blog .sidebar .jobs ul li span {
+  float: right;
+  color: #a3a3a3;
+}
+.single-blog .sidebar .jobs ul hr {
+  margin: 15px 0;
+}
+.single-blog .sidebar .recent-blog {
+  margin: 20px 0;
+}
+.single-blog .sidebar .recent-blog .blog-box {
+  margin: 20px 0;
+}
+.single-blog .sidebar .recent-blog .blog-box .img {
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.single-blog .sidebar .recent-blog .blog-box .img img {
+  width: 100%;
+}
+.single-blog .sidebar .recent-blog .blog-box .info {
+  display: inline-block;
+  width: calc(100% - 120px);
+  padding-left: 10px;
+}
+.single-blog .sidebar .recent-blog .blog-box .info p {
+  font-size: 17px;
+  color: #717171;
+  margin-bottom: 5px;
+}
+.single-blog .sidebar .recent-blog .blog-box .info p:hover {
+  color: #206dfb;
+}
+.single-blog .sidebar .recent-blog .blog-box .info .date {
+  font-size: 14px;
+  color: #909090;
+}
+.single-blog .sidebar .recent-blog .blog-box .info .date span {
+  margin-right: 5px;
+}
+.single-blog .sidebar .recent-blog .blog-box .info .date span i {
+  margin-right: 2px;
+}
+.single-blog .sidebar .tag-cloud {
+  margin: 10px 0;
+}
+.single-blog .sidebar .tag-cloud h2 {
+  font-size: 25px;
+}
+.single-blog .sidebar .tag-cloud ul li {
+  display: inline-block;
+  margin: 5px 0;
+}
+.single-blog .sidebar .tag-cloud ul li a {
+  border: 1px solid #d3d3d3;
+  padding: 2px 5px;
+  font-size: 14px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+.single-blog .sidebar .tag-cloud ul li a:hover {
+  background: #206dfb;
+  color: #FFF;
+  border-color: #206dfb;
+}
+.single-blog .sidebar .paragraph {
+  margin: 30px 0;
+}
+.single-blog .sidebar .paragraph h2 {
+  font-size: 25px;
+}
+.single-blog .sidebar .paragraph p {
+  color: #a3a3a3;
+  margin: 15px 0;
+}
+
+.contact-us {
+  padding: 70px 0;
+  background: #f8f9fa;
+}
+.contact-us h2.title {
+  font-size: 27px;
+  margin: 30px 0;
+}
+.contact-us .info {
+  color: #a3a3a3;
+  margin-bottom: 20px;
+}
+.contact-us .info a {
+  color: #333;
+}
+.contact-us .form {
+  margin: 30px 0;
+}
+.contact-us .form .map {
+  height: 100%;
+  min-height: 400px;
+  padding-bottom: 30px;
+}
+.contact-us .form form {
+  background: #FFF;
+  padding: 50px;
+}
+.contact-us .form form input, .contact-us .form form textarea {
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+}
+.contact-us .form form input.main-btn, .contact-us .form form input.second-btn, .contact-us .form form textarea.main-btn, .contact-us .form form textarea.second-btn {
+  width: auto;
+  padding: 15px 40px;
+  border: none;
+}
+
+.new-post {
+  padding: 100px 0;
+  background: #f8f9fa;
+}
+.new-post .post {
+  background: #FFF;
+  padding: 20px;
+}
+.new-post .post form {
+  padding: 10px;
+}
+.new-post .post form .options {
+  margin: 20px 0;
+  color: #a3a3a3;
+}
+.new-post .post form .options label {
+  display: block;
+  margin: 5px 0;
+}
+.new-post .post form .options label input {
+  margin-right: 5px;
+}
+.new-post .post form .options label span {
+  color: #69da69;
+  margin-right: 2px;
+}
+.new-post .post form .input-field {
+  margin: 20px 0;
+}
+.new-post .post form .input-field span {
+  display: block;
+  margin: 10px 0;
+  font-size: 17px;
+  color: #a3a3a3;
+}
+.new-post .post form .input-field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #DDD;
+}
+.new-post .post form .job-type {
+  margin: 10px 0;
+}
+.new-post .post form .job-type .option {
+  margin: 5px 0;
+}
+.new-post .post form .job-type .option label {
+  color: #a3a3a3;
+}
+.new-post .post form .location {
+  margin: 20px 0;
+}
+.new-post .post form .location input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #DDD;
+}
+.new-post .post form .desc {
+  margin: 20px 0;
+}
+.new-post .post form .desc textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #DDD;
+}
+.new-post .post form input.main-btn, .new-post .post form input.second-btn {
+  padding: 10px 50px;
+}
+.new-post .contact-info {
+  padding: 20px;
+  background: #FFF;
+}
+.new-post .contact-info h3.title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.new-post .contact-info .info {
+  margin-bottom: 30px;
+}
+.new-post .contact-info .info span {
+  display: block;
+  color: #909090;
+  font-weight: 600;
+}
+.new-post .contact-info .info p {
+  color: #a3a3a3;
+}
+.new-post .contact-info .info a {
+  color: #206dfb;
+}
+.new-post .more-info {
+  margin-top: 30px;
+  background: #FFF;
+  padding: 20px;
+}
+.new-post .more-info .title {
+  font-size: 20px;
+}
+.new-post .more-info p {
+  color: #a3a3a3;
+}
+
+.advanced-search {
+  background: #f8f9fa;
+  padding: 50px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

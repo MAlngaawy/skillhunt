@@ -42,7 +42,7 @@ nav {
   background: url(../../images/bg_1.jpg);
   position: relative;
   width: 100%;
-  min-height: 800px;
+  min-height: 400px;
   padding-bottom: 50px;
   .overlay {
     width: 100%;
@@ -100,73 +100,99 @@ nav {
         }
       }
     }
-    .tabs {
-      margin: 50px 0;
-      .row {
+  }
+  
+  .pages {
+    height: 200px;
+    display: grid;
+    align-items: end;
+    .breadcrumb {
+      background: none;
+      margin: 5px auto;
+      li {
+        color: rgba(255, 255, 255, 0.9);
         a {
-          background-color: $secondColor;
-          color: #FFF;
-          padding: 15px 30px;
-          border-radius: 5px;
-          margin-right: 10px;
-          font-size: 20px;
-          &.active, &:hover {
-            background-color: #FFF;
-            color: #333333;
-          }
+          color: rgba(255, 255, 255, 0.9);
         }
-        .find-job, .find-candidate {
-          background-color: #FFF;
-          padding: 30px;
-          border-radius: 10px;
-          transition: all 1s linear;
-          display: none;
-          opacity: 0;
-          &.active {
-            display: block;
-            opacity: 1;
+        &::before {
+          color: #FFF;
+        }
+      }
+    }
+  }
+  .page-title {
+    text-align: center;
+    color: #FFF;
+    font-size: 50px;
+  }
+}
+//////// End Header
+
+//// Tabs 
+.tabs {
+  margin: 50px 0;
+  .row {
+    a {
+      background-color: $secondColor;
+      color: #FFF;
+      padding: 15px 30px;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 20px;
+      &.active, &:hover {
+        background-color: #FFF;
+        color: #333333;
+      }
+    }
+    .find-job, .find-candidate {
+      background-color: #FFF;
+      padding: 30px;
+      border-radius: 10px;
+      transition: all 1s linear;
+      display: none;
+      opacity: 0;
+      &.active {
+        display: block;
+        opacity: 1;
+      }
+      form {
+        div {
+          margin: 0 5px;
+          position: relative;
+          padding: 0;
+          i {
+            position: absolute;
+            z-index: 2;
+            color: #3333;
+            top: 20px;
+            left: 10px;
+            font-size: 20px;
           }
-          form {
-            div {
+          input,select {
+            padding-left: 40px;
+            height: 60px;
+            color: #7575a1;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            font-size: 14px;
+            &.search-btn {
+              background-color: $mainColor;
+              color: #FFF;
+              font-size: 15px;
               margin: 0 5px;
-              position: relative;
+              border: none;
               padding: 0;
-              i {
-                position: absolute;
-                z-index: 2;
-                color: #3333;
-                top: 20px;
-                left: 10px;
-                font-size: 20px;
-              }
-              input,select {
-                padding-left: 40px;
-                height: 60px;
-                color: #7575a1;
-                border-radius: 5px;
-                border: 1px solid #ddd;
-                width: 100%;
-                font-size: 14px;
-                &.search-btn {
-                  background-color: $mainColor;
-                  color: #FFF;
-                  font-size: 15px;
-                  margin: 0 5px;
-                  border: none;
-                  padding: 0;
-                }
-              }
-              select {
-                padding-left: 30px;
-              }
             }
+          }
+          select {
+            padding-left: 30px;
           }
         }
       }
     }
   }
 }
-//////// End Header
 
 // Start Media Query
 

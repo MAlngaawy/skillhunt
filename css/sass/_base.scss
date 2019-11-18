@@ -14,8 +14,10 @@
 }
 
 a {
+  color: unset;
   &:hover {
     text-decoration: none;
+    color: unset;
   }
 }
 
