@@ -58,6 +58,31 @@ $(function(){
     }
     })
 
+    /// Start Scroll 
+
+    var scrollWindow = function() {
+      $(window).scroll(function(){
+        var $w = $(this),
+            st = $w.scrollTop(),
+            nav = $(".navbar");
+
+        if (st > 200) {
+          if(! nav.hasClass("scrolled")) {
+            nav.addClass("scrolled")
+          }
+        }
+
+        if (st < 200) {
+          if (nav.hasClass("scrolled")) {
+            nav.removeClass("scrolled")
+          }
+        }
+
+      })
+    }
+
+    scrollWindow();
+
 
 
 

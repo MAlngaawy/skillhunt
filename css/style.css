@@ -68,6 +68,28 @@ nav a {
   color: #FFF;
 }
 
+.navbar.scrolled {
+  background: #FFF !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  box-shadow: 5px 0 20px #333;
+}
+.navbar.scrolled .navbar-nav li a {
+  color: #333;
+}
+.navbar.scrolled .navbar-nav li.active a {
+  color: #206dfb;
+}
+.navbar.scrolled .navbar-brand {
+  color: #000000;
+}
+.navbar.scrolled .navbar-toggler {
+  color: #181818;
+}
+
 #header {
   background: url(../../images/bg_1.jpg);
   position: relative;
@@ -256,6 +278,15 @@ nav a {
 
   .find-job, .find-candidate {
     margin-top: -10px;
+  }
+
+  .tabs .row .tab-titles {
+    margin: auto;
+    text-align: center;
+  }
+  .tabs .row .tab-titles a {
+    display: inline-block;
+    margin: 5px auto;
   }
 }
 #footer {
@@ -737,6 +768,7 @@ section .title-text h2 {
   border-radius: 5px;
   background: #f9f9f9;
   margin-bottom: 10px;
+  width: 100%;
 }
 .recently .filter .category form .search-box i {
   position: absolute;
