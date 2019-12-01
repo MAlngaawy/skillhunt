@@ -66,13 +66,13 @@ $(function(){
             st = $w.scrollTop(),
             nav = $(".navbar");
 
-        if (st > 200) {
+        if (st > 100) {
           if(! nav.hasClass("scrolled")) {
             nav.addClass("scrolled")
           }
         }
 
-        if (st < 200) {
+        if (st < 100) {
           if (nav.hasClass("scrolled")) {
             nav.removeClass("scrolled")
           }

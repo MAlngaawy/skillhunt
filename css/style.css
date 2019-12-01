@@ -41,6 +41,7 @@ nav {
   position: absolute;
   top: 20px;
   z-index: 3;
+  transition: all 0.2s linear;
 }
 nav .navbar-brand {
   font-weight: 700;
